@@ -9,6 +9,8 @@ func _ready():
 
 
 func _process(delta):
+	velocidadActual = get_parent().get_node("BloqueDeEnemigos").velocidad 
 	position.x += velocidadActual * delta
 	if position.x < 100 or position.x > 900:
 		velocidadActual = - velocidadActual
+		get_parent().get_node("BloqueDeEnemigos").velocidad = velocidadActual
