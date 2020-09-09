@@ -5,7 +5,7 @@ var velocidadActual = pixelesPorSegundo
 
 
 func _ready():
-	pass 
+	connect("area_entered", self, "recibirDisparo")
 
 
 func _process(delta):
@@ -14,3 +14,8 @@ func _process(delta):
 	if position.x < 100 or position.x > 900:
 		velocidadActual = - velocidadActual
 		get_parent().get_node("BloqueDeEnemigos").velocidad = velocidadActual
+		
+
+func recibirDisparo(object):
+	object.queue_free()
+	queue_free()
