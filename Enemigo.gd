@@ -17,5 +17,6 @@ func _process(delta):
 		
 
 func recibirDisparo(object):
+	get_parent().call("incrementarPuntos")
 	object.queue_free()
 	queue_free()
