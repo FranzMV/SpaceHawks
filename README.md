@@ -1,2 +1,2 @@
 # SpaceHawks
-Ejercicio guiado de creación Juego 2D con Godot
+Ejercicio para crear un Juego 2D con Godot
